@@ -10,12 +10,12 @@
     <h2>User更新</h2>
     <form method="post" th:action="@{/user/update/{id}/(id=${user.id})}" th:object="${user}">
         <label for="id">ID</label>
-        <input type="hidden" id="id" name="name" th:value="*{id}" th:text="*{id}">
+        <input type="hidden" id="id" name="id" th:value="*{id}" th:text="*{id}">
         <br>
 
         <label for="name">名前</label>
         <input type="text" th:field="*{name}" th:errorclass="err">
-        <span th:errors="*{name}" class"err"></span>
+        <span th:errors="*{name}" class="err"></span>
         <br>
 
         <label for="gender">性別</label>
@@ -25,17 +25,17 @@
                 th:each="item:${T(com.techacademy.entity.User.Gender).values()}"
                 th:value="${item}" th:text="${item}" th:selected="*{gender} == ${item}">
         </select>
-        <span th:erros="*{gender}" class"err"></span>
+        <span th:errors="*{gender}" class="err"></span>
         <br>
 
         <label for="age">年齢</label>
         <input type="text" th:field="*{age}" th:errorclass="err">
-        <span th:erros="*{age}" class"err"></span>
+        <span th:errors="*{age}" class="err"></span>
         <br>
 
         <label for="email">メールアドレス</label>
         <input type="text" th:field="*{email}" th:errorclass="err">
-        <span th:erros="*{email}" class"err"></span>
+        <span th:errors="*{email}" class="err"></span>
         <br>
         <br>
 

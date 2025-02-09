@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 label {
-    display: inline-black;
+    display: inline-block;
     width: 8em;
     line-height: 150%;
 }
